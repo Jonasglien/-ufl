@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      .robototext {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        color: #DDE0F1;
+      }
+      .menutext {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+      }
+      .menutext-selected {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #6BD091;
+      }
+      .menu-col {
+        background: linear-gradient(180deg, #00C25E 44.27%, #15BB99 100%);
+      }
+      .content-col {
+        background-color: rgb(202, 196, 196);
+      }
+      .grafana-timeseries-left {
+        background-color: #FFFFFF; 
+        margin-left: 30%; 
+        border-radius: 7px;
+      }
+      .grafana-timeseries-right {
+        background-color: #FFFFFF; 
+        margin-left: 5%; 
+        border-radius: 7px;
+      }
+      .timeseries-header {
+        color: rgb(168, 162, 162); 
+        margin-top: 2%; 
+        margin-bottom: 5%;
+      }
+      .menu-graphics-size {
+        width: 19px;
+        height: 20px;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col-sm-2 menu-col">
+          <div class="sticky-top">
+          <img src="./graphics/logo_ufl.png" class="d-block m-auto" style="max-width: 70%; padding-top: 15%; padding-bottom: 70%;">
+          <div class="d-block m-auto" style="padding: 0 0 5% 20%;">
+            <img src="./graphics/dashboard.png" class="menu-graphics-size">
+            <button type="button" class="btn btn-lg menutext">Dashboard</button>
+          </div>
+          <div class="d-block m-auto" style="padding: 0 0 5% 20%">
+            <img src="./graphics/sensors.png" class="menu-graphics-size"">
+            <button type="button" class="btn menutext">Sensor</button>
+          </div>
+          <div class="d-block m-auto" style="padding: 0 0 5% 20%">
+            <img src="./graphics/farmbot.png" class="menu-graphics-size">
+            <button type="button" class="btn menutext">Farmbot</button>
+          </div>
+          <div class="d-block m-auto" style="padding: 0 0 5% 20%;"> 
+            <img src="./graphics/om-hagen.png" class="menu-graphics-size">
+            <button type="button" class="btn menutext">Om hagen</button>
+          </div>
+        </div></div>
+        <div class="col-sm-10 content-col">
+          <div class="row">
+            <h1 style="margin-top: 5%; margin-bottom: 2%; margin-left: 15.3%; color: #FFFFFF">Grafvisning</h1>
+            <p class="menutext" style="position: absolute; left: 80%; top: 2%;">Bjarte bruker</p>
+          </div>
+          <div class="row" style="position: relative;">
+            <div style="margin-top: 0; margin-bottom: 4%; margin-left: 15.5%;">
+              <p class="robototext">Grafene viser fuktigheten i jorda. På den måten vanner man kun plantene når de trenger det.</p>
+            </div>
+            <div style="position: absolute; right: 11%;">
+              <button type="button" class="btn robototext" style="width: 126px; background-color: #FF7857; border-radius: 32px;">Sensor</button>
+              <button type="button" class="btn robototext" style="width: 126px; border: 1px solid #FF7857; box-sizing: border-box; border-radius: 32px;">Farmbot</button>
+          </div>
+          </div>
+            <!-- <div class="graph-box-left" style="top: 10%"> 
+            <div>
+              <iframe src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"  style="border:none;"></iframe>
+            </div> -->
+          <div class="row">
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-left">
+                <h5 class="timeseries-header">Kasse 1</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-right">
+                <h5 class="timeseries-header">Kasse 2</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-left">
+                <h5 class="timeseries-header">Kasse 3</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-right">
+                <h5 class="timeseries-header">Kasse 4</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-left">
+                <h5 class="timeseries-header">Kasse 5</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-right">
+                <h5 class="timeseries-header">Kasse 6</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-left">
+                <h5 class="timeseries-header">Kasse 7</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-right">
+                <h5 class="timeseries-header">Kasse 8</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-left">
+                <h5 class="timeseries-header">Kasse 9</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6" style="margin-bottom: 2%;">
+              <div class="container p-3 w-75 grafana-timeseries-right">
+                <h5 class="timeseries-header">Kasse 10</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
