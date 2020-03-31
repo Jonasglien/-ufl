@@ -7,60 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <style>
-      html, body {
-        height: 100%;
-      }
-      .robototext {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        color: #535353;
-      }
-      .menutext {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 21px;
-        color: #FFFFFF;
-      }
-      .menutext-selected {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        color: #6BD091;
-      }
-      .menu-col {
-        background: linear-gradient(180deg, #00C25E 44.27%, #15BB99 100%);
-      }
-      .content-col {
-        background-color: #F0F0F0;
-      }
-      .grafana-timeseries-left {
-        background-color: #FFFFFF; 
-        margin-left: 30%; 
-        border-radius: 7px;
-      }
-      .grafana-timeseries-right {
-        background-color: #FFFFFF; 
-        margin-left: 5%; 
-        border-radius: 7px;
-      }
-      .timeseries-header {
-        color: #000000; 
-        margin-top: 2%; 
-        margin-bottom: 5%;
-        font-size: 18px;
-        line-height: 21px;
-      }
-      .menu-graphics-size {
-        width: 19px;
-        height: 20px;
-      }
-      </style>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/router.js"></script>
   </head>
   <body>
     <div class="container-fluid h-100">
@@ -70,11 +18,11 @@
           <img src="./graphics/logo_ufl.png" class="d-block m-auto" style="max-width: 70%; padding-top: 15%; padding-bottom: 70%;">
           <div class="d-block m-auto">
             <img src="./graphics/dashboard.png" class="menu-graphics-size">
-            <button type="button" class="btn btn-lg menutext">Dashboard</button>
+            <button href="#" data-target="dashboard" type="button" class="btn menutext" id="dashboardbtn">Dashboard</button>
           </div>
           <div class="d-block m-auto">
-            <img src="./graphics/sensors.png" class="menu-graphics-size"">
-            <button type="button" class="btn menutext">Sensor</button>
+            <img src="./graphics/sensors.png" class="menu-graphics-size">
+            <button href="#" data-target="sensor" type="button" class="btn menutext" id="sensorbtn">Sensor</button>
           </div>
           <div class="d-block m-auto">
             <img src="./graphics/farmbot.png" class="menu-graphics-size">
@@ -94,6 +42,32 @@
           <div class="row">
             <h1 style="margin-top: 5%; margin-bottom: 2%; margin-left: 15.3%; color: #535353;">Grafvisning</h1>
           </div>
+          <div class="row">
+            <div class="page" id="sensor">
+              <h1>Home</h1>
+              <ol>
+                <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
+                <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
+                <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
+              </ol>
+            </div>
+            <!-- <div class="page" id="list">
+              <h1>List</h1>
+              <ol>
+                <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
+                <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
+                <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
+              </ol>
+            </div>
+            <div class="page" id="detail">
+              <h1>Detail</h1>
+              <ol>
+                <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
+                <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
+                <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
+              </ol>
+            </div> -->
+          </div> 
           <div class="row" style="position: relative;">
             <div class="col-sm-8">
               <div style="position: absolute; left: 23%;">
@@ -111,6 +85,7 @@
             <div>
               <iframe src="http://13.94.124.213:3000/d-solo/i4aCJcuZk/test-dashboard?orgId=1&from=1584335574161&to=1584357174161&panelId=2"  style="border:none;"></iframe>
             </div> -->
+          <div class="page active" id="dashboard">
           <div class="row">
             <div class="col-sm-6" style="margin-bottom: 2%;">
               <div class="container p-3 w-75 grafana-timeseries-left">
@@ -200,7 +175,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
     </div>
