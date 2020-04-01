@@ -40,23 +40,24 @@
       
 -->
         <div class="col-sm-2 menu-col">
-          <div class="sticky-top">
+          <div class="sticky-top" style="overflow:hidden">
             <img src="./graphics/logo_ufl.png" class="d-block m-auto" style="max-width: 70%; padding-top: 15%; padding-bottom: 70%;">
-            <div >
-            <ul class="navbar-nav" style="display: inline-block; float: none;">
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-target="dashboard" id="dashboardbtn">Dashboard</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-target="sensor" id="sensorbtn">Sensors</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul></div>
+            <nav >
+              <ul class="navbar-nav" style="display: inline-block; float: none;">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-target="dashboard" id="dashboardbtn">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="spa.html" data-target="sensor" id="sensorbtn">Sensors</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
 
@@ -70,21 +71,22 @@
               <p class="robototext" style="position: absolute; left: 80%; top: 2%;">Bjarte bruker</p>
            </div>
          </div>
+         <div class="row" style="overflow:auto">
+          <div class="page" id="sensor">
+            <h1>Home</h1>
+            <ol>
+              <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
+              <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
+              <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
+            </ol>
+          </div>
+        </div> 
         <!-- <div class="container"> -->
           <div class="page active" id="dashboard">
             <div class="row">
                 <h1 style="margin-top: 5%; margin-bottom: 2%; margin-left: 15.3%; color: #535353;">Grafvisning</h1>
               </div>
-              <div class="row">
-                <div class="page" id="sensor">
-                  <h1>Home</h1>
-                  <ol>
-                    <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
-                    <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
-                    <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
-                  </ol>
-                </div>
-              </div> 
+              
               <div class="row" style="position: relative;">
                 <div class="col-sm-8">
                   <div style="position: absolute; left: 23%;">

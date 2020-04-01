@@ -2,7 +2,7 @@ const app = {
     init: function() {
         app.pages = document.querySelectorAll('.page');
 
-        document.querySelectorAll('.btn').forEach((link)=>{
+        document.querySelectorAll('.nav-link').forEach((link)=>{
             link.addEventListener('click', app.nav);
         });
 
