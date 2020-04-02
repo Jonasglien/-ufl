@@ -2,7 +2,7 @@ const app = {
     init: function() {
         app.pages = document.querySelectorAll('.page');
 
-        document.querySelectorAll('.nav-link').forEach((link)=>{
+        document.querySelectorAll('.btn').forEach((link)=>{
             link.addEventListener('click', app.nav);
         });
 
@@ -38,3 +38,4 @@ const app = {
 }
 
 document.addEventListener('DOMContentLoaded', app.init);
+
