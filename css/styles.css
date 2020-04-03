@@ -39,6 +39,22 @@ background-color: #FFFFFF;
 margin-left: 5%; 
 border-radius: 7px;
 }
+.sensor-container-left {
+margin-left: 20%; 
+border-radius: 7px;
+}
+.sensor-container-right {
+margin-left: 5%; 
+border-radius: 7px;
+}
+.sensor-value-box {
+text-align: center;
+width: 51px;
+height: 32px;
+background: #FFFFFF;
+border: 1px solid #BABABA;
+box-sizing: border-box;
+}
 .timeseries-header {
 color: #000000; 
 margin-top: 2%; 
