@@ -59,8 +59,11 @@
 
         <!--  HEADER BAR -->
         <div class="container-fluid" style="padding: 0;">
-          <div class="row" style="background: #FFFFFF; height: 50px; text-align: center;">
-            <p class="robototext" style="position: absolute; left: 80%;">Bjarte bruker</p>
+          <div class="row" style="background: #FFFFFF; height: 50px;">
+            <div class="col-sm-10"></div>
+            <div class="col-sm-2 text-align">
+              <button href="#" class="btn robototext"  style="width: 126px; border: 1px solid #1CB5FF; box-sizing: border-box; border-radius: 32px;">login</button>
+            </div>
           </div>
         </div>
 
@@ -84,9 +87,9 @@
                   <div class="float-sm-right" style="margin-bottom: 4%;">
                     <!-- style="position: absolute; right: 11%;" -->
                     <button type="button" class="btn robototext"
-                      style="width: 126px; background-color: #FF7857; border-radius: 32px;">Sensor</button>
+                      style="width: 126px; background-color: #1CB5FF; border-radius: 32px;">Sensor</button>
                     <button type="button" class="btn robototext"
-                      style="width: 126px; border: 1px solid #FF7857; box-sizing: border-box; border-radius: 32px;">Farmbot</button>
+                      style="width: 126px; border: 1px solid #1CB5FF; box-sizing: border-box; border-radius: 32px;">Farmbot</button>
                   </div>
                 </div>
               </div>
@@ -200,198 +203,205 @@
 
         <!-- SENSOR PAGE-->
         <div class="page" id="sensor">
-          <h1 style="margin-top: 2%; margin-bottom: 2%; margin-left: 15.3%; color: #535353;">Vanningskontroll</h1>
-
-          <!-- SLIDER 1 AND 2-->
           <div class="row">
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-left">
-                <h5 class="timeseries-header">Kasse 1</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider1">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue1"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-right">
-                <h5 class="timeseries-header">Kasse 2</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider2">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue2"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
 
-          <!-- SLIDER 3 AND 4-->
-          <div class="row">
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-left">
-                <h5 class="timeseries-header">Kasse 3</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider3">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue3"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-right">
-                <h5 class="timeseries-header">Kasse 4</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider4">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue4"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              <h1 style="margin-top: 2%; margin-bottom: 2%; color: #535353;">Vanningskontroll</h1>
 
-          <!-- SLIDER 5 AND 6-->
-          <div class="row">
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-left">
-                <h5 class="timeseries-header">Kasse 5</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider5">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue5"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-right">
-                <h5 class="timeseries-header">Kasse 6</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider6">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue6"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              <!-- SLIDER 1 AND 2-->
+              <div class="row">
 
-          <!-- SLIDER 7 AND 8 -->
-          <div class="row">
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-left">
-                <h5 class="timeseries-header">Kasse 7</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider7">
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-left">
+                    <h5 class="timeseries-header">Kasse 1</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider1">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue1"></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue7"></span>
+                </div>
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-right">
+                    <h5 class="timeseries-header">Kasse 2</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider2">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue2"></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-right">
-                <h5 class="timeseries-header">Kasse 8</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider8">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue8"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- SLIDER 9 AND 10 -->
-          <div class="row">
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-left">
-                <h5 class="timeseries-header">Kasse 9</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider9">
+              <!-- SLIDER 3 AND 4-->
+              <div class="row">
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-left">
+                    <h5 class="timeseries-header">Kasse 3</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider3">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue3"></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue9"></span>
+                </div>
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-right">
+                    <h5 class="timeseries-header">Kasse 4</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider4">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue4"></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-6" style="margin-bottom: 2%;">
-              <div class="container p-3 w-75 sensor-container-right">
-                <h5 class="timeseries-header">Kasse 10</h5>
-                <div class="row justify-content-center">
-                  <div class="col-sm-10">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider10">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="sensor-value-box" style="text-align: center;">
-                      <span id="sensorvalue10"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
+              <!-- SLIDER 5 AND 6-->
+              <div class="row">
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-left">
+                    <h5 class="timeseries-header">Kasse 5</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider5">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue5"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-right">
+                    <h5 class="timeseries-header">Kasse 6</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider6">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue6"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDER 7 AND 8 -->
+              <div class="row">
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-left">
+                    <h5 class="timeseries-header">Kasse 7</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider7">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue7"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-right">
+                    <h5 class="timeseries-header">Kasse 8</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider8">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue8"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDER 9 AND 10 -->
+              <div class="row">
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-left">
+                    <h5 class="timeseries-header">Kasse 9</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider9">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue9"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-bottom: 2%;">
+                  <div class="container p-3 sensor-container-right">
+                    <h5 class="timeseries-header">Kasse 10</h5>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-10">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="sensorslider10">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="sensor-value-box" style="text-align: center;">
+                          <span id="sensorvalue10"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
         </div> <!-- Sensor page ends-->
 
         <!-- FARMBOT PAGE-->
@@ -419,10 +429,10 @@
           <div class="row">
             <div class="col-sm-1"></div> <!-- empty side-column-->
             <div class="col-sm-10">
-              <div class="row">
-                <h1 style="margin-top: 2%; margin-bottom: 5%; color: #535353;">Hagen</h1>
-              </div>
-              <div class="row p-2">
+
+              <h1 style="margin-top: 2%; margin-bottom: 5%; color: #535353;">Hagen</h1>
+
+              <div class="row p-3">
                 <div class="card-deck">
                   <div class="card shadow">
                     <a data-toggle="collapse" href="#row1" role="button" aria-expanded="false"
@@ -454,7 +464,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row p-2">
+              <div class="row p-3">
                 <div class="card-deck">
                   <div class="card shadow">
                     <a data-toggle="collapse" href="#row2" role="button" aria-expanded="false"
@@ -486,7 +496,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row p-2">
+              <div class="row p-3">
                 <div class="card-deck">
                   <div class="card shadow">
                     <a data-toggle="collapse" href="#row3" role="button" aria-expanded="false"
@@ -518,7 +528,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row p-2">
+              <div class="row p-3">
                 <div class="card-deck">
                   <div class="card shadow">
                     <a data-toggle="collapse" href="#row4" role="button" aria-expanded="false"
@@ -550,7 +560,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row p-2">
+              <div class="row p-3">
                 <div class="card-deck">
                   <div class="card shadow">
                     <a data-toggle="collapse" href="#row5" role="button" aria-expanded="false"
