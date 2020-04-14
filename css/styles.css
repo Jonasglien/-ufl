@@ -30,13 +30,11 @@ background: linear-gradient(180deg, #00C25E 44.27%, #15BB99 100%);
 background-color: #F0F0F0;
 }
 .grafana-timeseries-left {
-background-color: #FFFFFF; 
-margin-left: 30%; 
+background-color: #FFFFFF;  
 border-radius: 7px;
 }
 .grafana-timeseries-right {
-background-color: #FFFFFF; 
-margin-left: 5%; 
+background-color: #FFFFFF;  
 border-radius: 7px;
 }
 .sensor-container-left {
