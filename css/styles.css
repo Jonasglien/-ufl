@@ -30,16 +30,12 @@ background: linear-gradient(180deg, #00C25E 44.27%, #15BB99 100%);
 .content-col {
 background-color: #F0F0F0;
 }
-.grafana-timeseries-left {
+.grafana-timeseries {
 background-color: #FFFFFF;  
 border-radius: 7px;
 }
-.grafana-timeseries-right {
-background-color: #FFFFFF;  
-border-radius: 7px;
-}
-.sensor-container-left {
 
+.sensor-container-left {
 border-radius: 7px;
 }
 .sensor-container-right {
@@ -66,8 +62,23 @@ line-height: 21px;
 width: 17px;
 height: 18px;
 }
+.menubtn {
+
+}
+.dashboardbtn {
+
+}
 .page {
 display: none;
+}
+.grafana-cards {
+display: none !important;
+}
+.img-and-info {
+display: none !important;
+}
+.showing {
+display: block !important;
 }
 .active {
 display: block;

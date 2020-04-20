@@ -2,8 +2,11 @@ const app = {
     init: function() {
         app.pages = document.querySelectorAll('.page');
 
-        document.querySelectorAll('.btn').forEach((link)=>{
+        document.querySelectorAll('.menubtn').forEach((link)=>{
             link.addEventListener('click', app.nav);
+        });
+        document.querySelectorAll('.dashboardbtn').forEach((link)=>{
+            link.addEventListener('click', app.dashnav);
         });
 
         history.replaceState({}, 'Dashboard', '#dashboard');
@@ -18,14 +21,18 @@ const app = {
         history.pushState({}, currentPage, `#${currentPage}`);
        // document.getElementById(currentPage).dispatchEvent(app.show);
     },
-    pageShown: function(ev){
-        console.log('Page', ev.target.id, 'just shown');
-        let h1 = ev.target.querySelector('h1');
-        h1.classList.add('big')
-        setTimeout((h)=>{
-            h.classList.remove('big');
-        }, 1200, h1);
-    },
+    dashnav: function(ev){
+        ev.preventDefault();
+        let dashboardPage = ev.target.getAttribute('data-target');
+        let x = document.querySelectorAll('.showing');
+        let y = document.querySelectorAll("."+dashboardPage);
+        for (i=0; i < x.length; i++) {
+            x[i].classList.remove('showing');
+        };
+        for (j=0; j <= y.length; j++) {
+            y[j].classList.add('showing');
+        };        
+    },    
     poppin: function(ev){
         console.log(location.hash, 'popstate event');
         let hash = location.hash.replace('#' ,'');
@@ -38,4 +45,3 @@ const app = {
 }
 
 document.addEventListener('DOMContentLoaded', app.init);
-
