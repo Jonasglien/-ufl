@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/login.css">
   <script src="./js/router.js"></script>
 </head>
 
@@ -58,10 +59,48 @@
           <div class="row" style="background: #FFFFFF; height: 50px;">
             <div class="col-sm-10"></div>
             <div class="col-sm-2 text-align">
-              <button href="#" class="btn robototext"  style="width: 126px; border: 1px solid #1CB5FF; box-sizing: border-box; border-radius: 32px;">login</button>
+              <button href="#" class="btn robototext menubtn" data-target="loginmenu" style="width: 126px; border: 1px solid #1CB5FF; box-sizing: border-box; border-radius: 32px;">login</button>
             </div>
           </div>
         </div>
+
+        <!-- LOGIN MENU-->
+        <div class="container pt-5">
+        <div class="row justify-content-center">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+            <div class="page login wrapper" id="loginmenu">
+              <!-- class fadeInDown-->
+              
+                <div id="formContent">
+        
+                  <!--Header-->
+                  <div style="padding-top: 2rem;">
+                    <h5 class="timeseries-header">Become master of the sensors!</h5>
+                  </div>
+        
+                  <!-- Login Form -->
+                  <form>
+                    <input type="text" id="login" name="login" placeholder="login">
+                    <!--class="fadeIn second"-->
+                    <input type="text" id="password" name="login" placeholder="password">
+                    <!--class="fadeIn third" -->
+                    <input type="submit" value="Log In">
+                    <!--class="fadeIn fourth" -->
+                  </form>
+        
+                  <!-- Remind Passowrd -->
+                  <div id="formFooter">
+                    <a class="underlineHover" href="#">Forgot Password?</a>
+                  </div>
+        
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+      </div>
 
         <!-- DASHBOARD PAGE -->
         <div class="page active" id="dashboard">
@@ -235,9 +274,15 @@
           <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
-
-              <h1 style="margin-top: 2%; margin-bottom: 2%; color: #535353;">Vanningskontroll</h1>
-
+              <div class="row">
+                <div class="col-sm-10">
+                  <h1 style="margin-top: 2%; margin-bottom: 2%; color: #535353;">Vanningskontroll</h1>
+                </div>
+                <div class="col-sm-2">
+                  <button type="button" class="btn robototext"
+                  onclick="submitSensorChanges()" style="width: 126px; background-color: #1CB5FF; border-radius: 32px;">Submit changes</button>
+                </div>
+            </div>
               <!-- SLIDER 1 AND 2-->
               <div class="row">
 
@@ -435,7 +480,6 @@
 
         <!-- FARMBOT PAGE-->
         <div class="page" id="farmbot">
-
           <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
@@ -457,6 +501,7 @@
     </div>
   </div>
   <script src="./js/sliders.js"></script>
+  <script src="./js/login.js"></script>
 </body>
 
 </html>
