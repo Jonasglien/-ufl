@@ -2,6 +2,12 @@ html, body {
 height: 100%;
 font-family: Roboto;
 }
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
 .robototext {
 font-family: Roboto;
 font-style: normal;
@@ -58,15 +64,35 @@ font-family: Roboto;
 font-size: 18px;
 line-height: 21px;
 }
-.menu-graphics-size {
-width: 17px;
-height: 18px;
-}
-.menubtn {
 
+/* MARIA  oppdaterte strl*/ 
+.btn {
+    padding: .5rem 1.5rem;
+    border-radius: 3.2rem;
+}
+.btn-group .btn.btn-primary {
+    background: #00C25E;
+    border:0
+}
+.btn-group .btn.btn-primary {
+    background: #00C25E;
+    border:0
+}
+
+.btn-group .btn.btn-secondary {
+    background: #E3E3E3;
+    border: 0;
+    color: black;
+}
+
+.menu-graphics-size { 
+    width: 23px;
+}
+/* Maria Slutt */
+
+.menubtn {
 }
 .dashboardbtn {
-
 }
 .page {
 display: none;

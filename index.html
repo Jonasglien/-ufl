@@ -15,51 +15,60 @@
 </head>
 
 <body>
-  <div class="container-fluid h-100">
+  <div class="container-fluid h-100"> 
     <div class="row h-100">
 
 
       <!-- NAVIGATION COLUMN -->
-      <div class="col-sm-2 menu-col">
-        <div class="container-fluid sticky-top overflow-hidden" style="padding: 0;">
-          <div class="row h-100">
-            <div class="container p-3 pb-5" style="border-bottom: 1px solid white;">
-              <img src="./graphics/logo_ufl.png" class="d-block m-auto" style="max-width: 75%;">
+      <!-- Endret hele menyen til nav-->
+      <nav class="col-12 col-sm-2 col-md-3 menu-col sticky-top overflow-hidden px-0"> <!-- Maria bytta denne til nav og la til klassen px-0 -->
+        <div class="row h-100 py-2 px-0">
+          
+          <div class="col-12 align-self-start">
+            <div class="container p-3 pb-5"> <!-- Maria -->
+              <img src="./graphics/logo_ufl.png" class="d-block m-auto pt-5" style="max-width: 60%;">  <!-- Maria, endret max-with og la på pt-5-->
             </div>
-            <!-- NAVBAR -->
-            <div class="container-fluid p-4 pt-5">
-              <div style="display: inline-block;">
-                <img src="./graphics/dashboard.png" class="menu-graphics-size">
-                <button href="#" data-target="dashboard" type="button" class="btn menutext menubtn"
-                  id="dashboardbtn">Dashboard</button>
+
+            <div class="container-fluid px-0"> <!-- Maria endret p-klasser + fjernet padding -->
+              <div class="row d-block m-auto px-2 px-md-4 ">
+                <img src="./graphics/dashboard.png" class="menu-graphics-size d-none d-lg-inline"> <!-- Maria  display klasser-->
+                <button href="#" data-target="dashboard" type="button" class="btn btn-link menutext menubtn p-3"
+                  id="dashboardbtn">Hagen</button> <!-- Maria la på p-3-->
               </div>
-              <div class="row d-block m-auto">
-                <img src="./graphics/sensors.png" class="menu-graphics-size">
-                <button href="#" data-target="sensor" type="button" class="btn menutext menubtn" id="sensorbtn">Sensor</button>
+              <div class="row d-block m-auto px-2 px-md-4">
+                  <img src="./graphics/farmbot.png" class="menu-graphics-size d-none d-lg-inline"> <!-- Maria  display klasser-->
+                  <button href="#" data-target="farmbot" type="button" class="btn btn-link menutext menubtn p-3"
+                    id="farmbotbtn">Farmbot</button> <!-- Maria la på p-3-->
               </div>
-              <div class="row d-block m-auto">
-                <img src="./graphics/farmbot.png" class="menu-graphics-size">
-                <button href="#" data-target="farmbot" type="button" class="btn menutext menubtn"
-                  id="farmbotbtn">Farmbot</button>
+              <div class="row d-block m-auto px-2 px-md-4">
+                <img src="./graphics/sensors.png" class="menu-graphics-size d-none d-lg-inline"> <!-- Maria  display klasser-->
+                <button href="#" data-target="sensor" type="button" class="btn btn-link menutext menubtn p-3" 
+                id="sensorbtn">Sensor</button> <!-- Maria la på p-3-->
               </div>
             </div>
           </div>
+          <!-- Maria, Ny log inn knapp -->
+          <div class="col-12 align-self-end px-4 pb-0 pb-md-4">
+              <button href="#" class="btn btn-block bg-white px-2 px-sm-4 menubtn" data-target="loginmenu" style="padding:0.5rem 2.5rem;">login</button>
+          </div>
+
         </div>
-      </div>
+      </nav>
 
 
 
 
 
       <!-- MAIN COLUMN-->
-      <div class="col-sm-10 content-col" style="overflow-y: scroll">
+      <div class="col-12 col-sm-10 col-md-9 content-col" style="overflow-y: scroll; height: 100%"> <!-- Maria, La på height -->
 
         <!--  HEADER BAR -->
         <div class="container-fluid" style="padding: 0;">
-          <div class="row" style="background: #FFFFFF; height: 50px;">
+          <div class="row pt-5 pb-4" style="background: #FFFFFF;">  <!--  Maria, fjernet størrelse i style, endret til padding i klassen-->
             <div class="col-sm-10"></div>
+             <!--  Maria -  Flytter log in knappen, ny knapp i menyen -->
             <div class="col-sm-2 text-align">
-              <button href="#" class="btn robototext menubtn" data-target="loginmenu" style="width: 126px; border: 1px solid #1CB5FF; box-sizing: border-box; border-radius: 32px;">login</button>
+                
             </div>
           </div>
         </div>
@@ -107,7 +116,7 @@
           <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
-              <h1 style="margin-top: 2%; margin-bottom: 2%; color: #535353;">Dashboard</h1>
+              <h1 style="margin-top: 2%; margin-bottom: 2%; color: #535353;">Hagen</h1>
 
 
               <div class="row" style="position: relative;">
@@ -121,10 +130,13 @@
                 <div class="col-sm-5">
                   <div class="float-sm-right" style="margin-bottom: 4%;">
                     <!-- DASHBOARD RIGHTSIDE BUTTONS -->
-                    <button type="button" class="btn robototext dashboardbtn"
-                      data-target="grafana-cards" style="width: 126px; background-color: #1CB5FF; border-radius: 32px;">Grafer</button>
-                    <button type="button" class="btn robototext dashboardbtn"
-                      data-target="img-and-info" style="width: 126px; border: 1px solid #1CB5FF; box-sizing: border-box; border-radius: 32px;">Planter</button>
+
+                    <!-- Maria erstattet dette med btn-group -->
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button" data-target="grafana-cards" class="btn btn-primary dashboardbtn">Grafer</button>
+                      <button type="button" data-target="img-and-info" class="btn btn-secondary dashboardbtn">Planter</button>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -134,8 +146,8 @@
 
               <!-- KASSE 1 -->
               <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;"> <!-- Maria: Endret margin bottom  i alle kort-->
+                  <div class="container p-3 grafana-timeseries"> <!-- Maria: Fjerna shadows fra alle kort-->
                     <h5 class="timeseries-header">Kasse 1</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -146,8 +158,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
+                  <div class="container p-3 grafana-timeseries">
                     <h5 class="timeseries-header">Kasse 2</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -160,8 +172,8 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
+                  <div class="container p-3 grafana-timeseries">
                     <h5 class="timeseries-header">Kasse 3</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -172,8 +184,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
+                  <div class="container p-3 grafana-timeseries">
                     <h5 class="timeseries-header">Kasse 4</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -186,8 +198,8 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
+                  <div class="container p-3 grafana-timeseries">
                     <h5 class="timeseries-header">Kasse 5</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -198,8 +210,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
+                  <div class="container p-3 grafana-timeseries">
                     <h5 class="timeseries-header">Kasse 6</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -212,8 +224,8 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
+                  <div class="container p-3 grafana-timeseries">
                     <h5 class="timeseries-header">Kasse 7</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -224,8 +236,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
+                  <div class="container p-3 grafana-timeseries">
                     <h5 class="timeseries-header">Kasse 8</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -238,8 +250,8 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
+                  <div class="container p-3 grafana-timeseries">
                     <h5 class="timeseries-header">Kasse 9</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -250,8 +262,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
-                  <div class="container p-3 grafana-timeseries shadow">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
+                  <div class="container p-3 grafana-timeseries">
                     <h5 class="timeseries-header">Kasse 10</h5>
                     <div class="embed-responsive embed-responsive-16by9 grafana-cards showing">
                       <iframe class="embed-responsive-item"
@@ -280,13 +292,13 @@
                 </div>
                 <div class="col-sm-2">
                   <button type="button" class="btn robototext"
-                  onclick="submitSensorChanges()" style="width: 126px; background-color: #1CB5FF; border-radius: 32px;">Submit changes</button>
+                  onclick="submitSensorChanges()" style="width: 126px; background-color: #00C25E; color:white; border-radius: 32px;">Submit changes</button> <!-- Maria Endret farge på knapp-->
                 </div>
             </div>
               <!-- SLIDER 1 AND 2-->
               <div class="row">
 
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-left">
                     <h5 class="timeseries-header">Kasse 1</h5>
                     <div class="row justify-content-center">
@@ -303,7 +315,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-right">
                     <h5 class="timeseries-header">Kasse 2</h5>
                     <div class="row justify-content-center">
@@ -324,7 +336,7 @@
 
               <!-- SLIDER 3 AND 4-->
               <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-left">
                     <h5 class="timeseries-header">Kasse 3</h5>
                     <div class="row justify-content-center">
@@ -341,7 +353,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-right">
                     <h5 class="timeseries-header">Kasse 4</h5>
                     <div class="row justify-content-center">
@@ -362,7 +374,7 @@
 
               <!-- SLIDER 5 AND 6-->
               <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-left">
                     <h5 class="timeseries-header">Kasse 5</h5>
                     <div class="row justify-content-center">
@@ -379,7 +391,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-right">
                     <h5 class="timeseries-header">Kasse 6</h5>
                     <div class="row justify-content-center">
@@ -400,7 +412,7 @@
 
               <!-- SLIDER 7 AND 8 -->
               <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-left">
                     <h5 class="timeseries-header">Kasse 7</h5>
                     <div class="row justify-content-center">
@@ -417,7 +429,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-right">
                     <h5 class="timeseries-header">Kasse 8</h5>
                     <div class="row justify-content-center">
@@ -438,7 +450,7 @@
 
               <!-- SLIDER 9 AND 10 -->
               <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-left">
                     <h5 class="timeseries-header">Kasse 9</h5>
                     <div class="row justify-content-center">
@@ -455,7 +467,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" style="margin-bottom: 2%;">
+                <div class="col-sm-6" style="margin-bottom: 3%;">
                   <div class="container p-3 sensor-container-right">
                     <h5 class="timeseries-header">Kasse 10</h5>
                     <div class="row justify-content-center">
